@@ -22,8 +22,11 @@ Time to live can be changed by tweaking the value in the `-a` option.
 
 run `install.sh` to put the timers and services in place.
 
+### ZFS unlock script
+Unlocks encrypted zfs filesystems at boot time with systemd-ask-password. All datasets with this password are unlocked. Activate with `systemctl enable zfs-load-key@partition-to-unlock`. Slashs in folders`/` are escaped as `-`.
 
-### ZFS Encryption Benchmark
+
+### ZFS encryption Benchmark
 This software tests all the currently available zfs encryption algorithms on how fast they are by creating a new dataset and copying files onto it. You can select the algorithms you want to test, and also need to set the folder which you want to copy onto your datasets.
 
 

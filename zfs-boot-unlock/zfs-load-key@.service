@@ -1,0 +1,16 @@
+[Unit]
+Description=Load %I encryption keys
+Before=systemd-user-sessions.service zfs-mount.service
+After=zfs-import.target
+Requires=zfs-import.target
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/bash -c 'until (systemd-ask-password "Encrypted ZFS password for %I" --no-tty --keyname=zfs_enc_passphr --accept-cached | zfs load-key %I); do echo "Try again!"; done'
+
+[Install]
+#WantedBy=zfs.target
+# Ursprünglich so, aber die Sachen wurden nicht geladen.
+WantedBy=zfs-mount.service
