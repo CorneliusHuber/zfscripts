@@ -30,7 +30,7 @@ Time to live can be changed by tweaking the value in the `-a` option.
 
 
 ### ZFS unlock script
-Unlocks encrypted zfs filesystems at boot time with systemd-ask-password. All datasets with this password are unlocked. Activate with `systemctl enable zfs-load-key@partition-to-unlock`. Slashs in folders`/` are escaped as `-`.
+Unlocks encrypted zfs filesystems at boot time with systemd-ask-password. All datasets with this password are unlocked. Install with `install.sh`. Activate with `systemctl enable zfs-load-key@partition-to-unlock`. Slashs in folders`/` are escaped as `-`.
 
 
 ### ZFS encryption Benchmark
