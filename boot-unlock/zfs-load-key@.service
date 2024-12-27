@@ -1,3 +1,4 @@
+# Copied from https://wiki.archlinux.org/title/ZFS#Unlock/Mount_at_boot_time:_systemd
 [Unit]
 Description=Load %I encryption keys
 Before=systemd-user-sessions.service zfs-mount.service
