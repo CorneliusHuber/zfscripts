@@ -5,7 +5,7 @@ pwfile=$configs/.zfs_benchmark_pwfile                   # File wich acts as a pa
                                                         # Automatically generated.
 algofile=$configs/algorithms                            # Contains all tested algorithms,
                                                         # This could include 'off' for no encryption.
-copy_path=$configs/copy_folder                          # This folder ist copied during the benchmark
+copy_path=$configs/copy_folder                          # This folder is copied during the benchmark.
 mount_point=/mnt/zfs_encryption_benchmark
 end_mount_point=_zfs_benchmark
 time_command_line_1="CPU-seconds user mode:      %U\n"
