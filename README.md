@@ -4,7 +4,15 @@ Scripts and systemd units I use to manage ZFS on my systems.
 ## Folders:
 
 ### Timers
-Requirements: `systemd`, `zfsnap`
+#### Requirements:
+
+`systemd`, `zfsnap`
+
+#### Activation
+
+Run `install.sh` to put the timers and services in place. Activate with `systemctl enable snapshot-daily@partition-to-snapshot.timer`.
+
+#### Livespan
 
 `cat snapshot-daily@.service`:
 ```
@@ -20,7 +28,6 @@ ExecStart=zfsnap snapshot -a2w -p zfsnap %I
 
 Time to live can be changed by tweaking the value in the `-a` option.
 
-run `install.sh` to put the timers and services in place.
 
 ### ZFS unlock script
 Unlocks encrypted zfs filesystems at boot time with systemd-ask-password. All datasets with this password are unlocked. Activate with `systemctl enable zfs-load-key@partition-to-unlock`. Slashs in folders`/` are escaped as `-`.
