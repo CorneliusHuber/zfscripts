@@ -46,7 +46,7 @@ This software tests all the currently available zfs encryption algorithms on how
 
 #### Configuration
 The algorithms which are benchmarked are listed in the file `config/algorithms`. For the ease of writing this script, every new algorithm needs to be a new word. It does not need to be on a new line, it makes things easier on the eyes however.
-You can select ONE path to a folder, relative to your home directory in the file `config/copy_folder`, as already done in this git repo. I personally just symlink the folder I want to copy into the location specified in this file.
+You can select ONE path to a folder, relative to your home directory in the file `config/copy_folder`, you will need to do this yourself. I personally just symlink the folder I want to copy into the location specified in this file.
 
 
 #### Usage
