@@ -1,0 +1,10 @@
+[Unit]
+Description=Snapshots once a minute, for testing.
+After=zfs-mount.service
+
+[Timer]
+OnCalendar=minutely
+Persistent=True
+
+[Install]
+WantedBy=zfs.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Destroys old snapshots.
+After=zfs-mount.service
+
+[Timer]
+# Every day at three in the morning.
+OnCalendar=daily
+
+[Install]
+WantedBy=zfs.target

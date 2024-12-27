@@ -1,0 +1,11 @@
+[Unit]
+Description=Snapshots on the first of the month.
+After=zfs-mount.service
+
+[Timer]
+# Every first of the month at three.
+OnCalendar=*-*-1 00:03:00
+Persistent=True
+
+[Install]
+WantedBy=zfs.target

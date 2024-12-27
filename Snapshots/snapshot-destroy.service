@@ -1,0 +1,8 @@
+[Unit]
+Description=Destroys old snapshots.
+
+[Service]
+Type=oneshot
+StandardOutput=journal
+StandardError=journal
+ExecStart=zfsnap destroy -rp zfsnap pfaffenhofen/home/cornelius

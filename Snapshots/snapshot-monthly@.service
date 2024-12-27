@@ -1,0 +1,8 @@
+[Unit]
+Description=Does the monthly snapshot.
+
+[Service]
+Type=oneshot
+StandardOutput=journal
+StandardError=journal
+ExecStart=zfsnap snapshot -a1y -p zfsnap -n %I

@@ -1,0 +1,8 @@
+[Unit]
+Description=Snapshots once a minute for testing.
+
+[Service]
+Type=oneshot
+StandardOutput=journal
+StandardError=journal
+ExecStart=zfsnap snapshot -a2w -p zfsnap %I

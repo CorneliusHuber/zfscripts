@@ -1,0 +1,8 @@
+[Unit]
+Description=Does the weekly snapshot.
+
+[Service]
+Type=oneshot
+StandardOutput=journal
+StandardError=journal
+ExecStart=zfsnap snapshot -a2m -p zfsnap -n %I

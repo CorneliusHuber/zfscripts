@@ -1,0 +1,12 @@
+[Unit]
+Description=Snapshots once a day.
+After=zfs-mount.service
+
+[Timer]
+# Every day at three in the morning, except
+# the first day of the month and Sundays. 
+OnCalendar=Mon..Sat *-*-2..31 00:03:00
+Persistent=True
+
+[Install]
+WantedBy=zfs.target
