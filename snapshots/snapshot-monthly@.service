@@ -5,4 +5,4 @@ Description=Does the monthly snapshot.
 Type=oneshot
 StandardOutput=journal
 StandardError=journal
-ExecStart=zfsnap snapshot -a1y -p zfsnap -n %I
+ExecStart=zfsnap snapshot -a1y -p zfsnap %I

@@ -5,4 +5,4 @@ Description=Does the weekly snapshot.
 Type=oneshot
 StandardOutput=journal
 StandardError=journal
-ExecStart=zfsnap snapshot -a2m -p zfsnap -n %I
+ExecStart=zfsnap snapshot -a2m -p zfsnap %I

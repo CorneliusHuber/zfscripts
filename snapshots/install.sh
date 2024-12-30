@@ -19,3 +19,5 @@ install -o root -g root -m 644 snapshot-destroy.service $target
 # Test files
 install -o root -g root -m 644 snapshot-test@.timer $target
 install -o root -g root -m 644 snapshot-test@.service $target
+
+systemctl daemon-reload
