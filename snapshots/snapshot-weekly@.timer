@@ -5,7 +5,7 @@ After=zfs-mount.service
 [Timer]
 # Every Sunday at three in the morning except
 # when a Sunday is the first in the month.
-OnCalendar=Sun *-*-2..31 00:03:00
+OnCalendar=Sun *-*-2..31 03:00:00
 Persistent=True
 
 [Install]
